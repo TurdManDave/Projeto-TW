@@ -25,7 +25,7 @@
 }
 
 .card-btn:hover{
-    background: #efefef;
+    background: #00ffbf;
 }
 
 .product-card:hover .card-btn{
@@ -46,7 +46,7 @@
     text-transform: capitalize;
     border: none;
     outline: none;
-    background: #fff;
+    background: #d4d2d2;
     border-radius: 5px;
     transition: 0.5s;
     cursor: pointer;
@@ -57,6 +57,11 @@
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
+    margin: 5px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    height: 480px;
+    width: 460px;
 }
 
 .product-container::-webkit-scrollbar{
