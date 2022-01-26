@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-commerce</title>
     <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="produtos.css">
+    <link rel="stylesheet" href="footer.css">
 </head>
 <body>
     <nav class="navbar">
@@ -22,7 +22,7 @@
                 <a href="cart.html"><img src="img/shopping-cart.svg"></a>
             </div>
         </div>
-        </nav>
+    </nav>
     <header class="hero-section">
         <div class="slideshow-container">
             <div class="mySlides">
@@ -49,34 +49,7 @@
               <span class="dot" onclick="currentSlide(3)"></span> 
             </div>
         </div>   
-        <script>
-            var slideIndex = 1;
-            showSlides(slideIndex);
-            
-            function plusSlides(n) {
-              showSlides(slideIndex += n);
-            }
-            
-            function currentSlide(n) {
-              showSlides(slideIndex = n);
-            }
-            
-            function showSlides(n) {
-              var i;
-              var slides = document.getElementsByClassName("mySlides");
-              var dots = document.getElementsByClassName("dot");
-              if (n > slides.length) {slideIndex = 1}    
-              if (n < 1) {slideIndex = slides.length}
-              for (i = 0; i < slides.length; i++) {
-                  slides[i].style.display = "none";  
-              }
-              for (i = 0; i < dots.length; i++) {
-                  dots[i].className = dots[i].className.replace(" active", "");
-              }
-              slides[slideIndex-1].style.display = "block";  
-              dots[slideIndex-1].className += " active";
-            }
-            </script>
+        <script src="header.js"></script>
     </header>
     <section class="product">
         <h2 class="product-category">Best selling</h2>
@@ -174,7 +147,46 @@
             </div>
         </div>
     </section>
-    <footer>
+    <footer class= "footer">
+        <div class="footer-content">
+            <img src="img/logo.jpg" class="logo" alt="">
+            <div class="footer-ul-container">
+                <ul class="category">
+                    <li class="category-title">Servecies</li>
+                    <li><a href="#" class="footer-link">Online Suport</a></li>
+                    <li><a href="#" class="footer-link">Build a PC</a></li>
+                    <li><a href="#" class="footer-link">Store Locations</a></li>
+                </ul>
+                <ul class="category">
+                    <li class="category-title">Software/Hardware</li>
+                    <li><a href="#" class="footer-link">Microsoft products</a></li>
+                    <li><a href="#" class="footer-link">Apple Procucts</a></li>
+                    <li><a href="#" class="footer-link">Samsung products</a></li>
+                    <li><a href="#" class="footer-link">Apliances</a></li>
+                    <li><a href="#" class="footer-link">Celphones</a></li>
+                    <li><a href="#" class="footer-link">Computers</a></li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <div>
+            <p class="footer-title">About Us</p>
+            <p class="info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat tempore ad suscipit, eos eius quisquam sed optio nisi quaerat fugiat ratione et vero maxime praesentium, architecto minima reiciendis iste quo deserunt assumenda alias ducimus. Ullam odit maxime id voluptates rerum tenetur corporis laboriosam! Cum error ipsum laborum tempore in rerum necessitatibus nostrum nobis modi! Debitis adipisci illum nemo aperiam sed, et accusamus ut officiis. Laborum illo exercitationem quo culpa reprehenderit excepturi distinctio tempore cupiditate praesentium nisi ut iusto, assumenda perferendis facilis voluptas autem fuga sunt ab debitis voluptatum harum eum. Asperiores, natus! Est deserunt incidunt quasi placeat omnis, itaque harum?</p>
+            <p class="info">support emails - something@something.com, something@something.com</p>
+            <p class="info">Telephone - 55 555 555, 5555 555 555</p>
+        </div>
+        
+        <div class="footer-social-container">
+            <div>
+                <a href="#" class="social-link">Terms & Services</a>
+            </div>
+        <div>
+            <a href="#" class="social-link">instagram</a>
+            <a href="#" class="social-link">facebook</a>
+            <a href="#" class="social-link">twitter</a>
+        </div>
+    </div>
+    <p class="footer-credit">Just the best tech online shopping</p>
     </footer>
 </body>
 </html>
