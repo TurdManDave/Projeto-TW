@@ -22,7 +22,7 @@ function ready() {
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', compra)
 }
 var targetDiv = document.getElementById("show-carro");
-function teste() {
+function carrinho() {
     if (targetDiv.style.display == "block") {
         targetDiv.style.display = "none";
     } else {
@@ -32,7 +32,7 @@ function teste() {
 function compra(){
     var cartitems = document.getElementsByClassName('cart-items')[0]
     if (cartitems.hasChildNodes()) {
-        alert('Obrigado pela sua compra!')
+        alert('Por favor aguarde vai ser redirecionado')
         while (cartitems.hasChildNodes()) {
             cartitems.removeChild(cartitems.firstChild)
     }
@@ -70,15 +70,15 @@ function additemtocart(title, price, imgsrc) {
     }
     var cartrowscontent = `
         <div class="product-cart">
-        <div class="cart-item cart-column">
-            <img src="${imgsrc}" width="100" height="82">
-            <span class="cart-item-title">${title}</span>
-        </div>
-        <span class="cart-price cart-column">${price}</span>
-        <div class="cart-quantity cart-columm">
-            <input class="cart-quantity-input" type="number" value="1">
-            <button class="btn btn-danger" type="button">Remover</button>
-        </div>
+            <div class="cart-item cart-column">
+                <img src="${imgsrc}" width="70" height="55">
+                <span class="cart-item-title">${title}</span>
+            </div>
+            <span class="cart-price cart-column">${price}</span>
+            <div class="cart-quantity cart-columm">
+                <input class="cart-quantity-input" type="number" value="1">
+                <button class="btn-danger" type="button">Remover</button>
+            </div>
         </div>`
     cartrow.innerHTML = cartrowscontent
     cartitems.append(cartrow)
@@ -102,8 +102,7 @@ function updatecarttotal() {
         var cartrow = cartrows[i]
         var priceelement = cartrow.getElementsByClassName('cart-price')[0]
         var quantityelement = cartrow.getElementsByClassName('cart-quantity-input')[0]
-        var innertext = priceelement.innerText
-        var price = parseFloat(innertext.replace("$", ""))
+        var price = parseFloat(priceelement.innerText.replace("$ ", ""))
         var quantity = quantityelement.value
         total = total + (price * quantity)
     }
