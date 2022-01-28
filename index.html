@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="produtos.css">
     <link rel="stylesheet" href="footer.css">
-</head>
+    <link rel="stylesheet" href="carrinho.css">
+    <script src="carrinho.js" async></script>
+</head> 
 <body>
     <nav class="navbar">
         <div class="nav">
@@ -19,7 +21,7 @@
                     <button class="search-btn">search</button>
                 </div>
                 <a href="user.html"><img src="img/user.svg"></a>
-                <a href="cart.html"><img src="img/shopping-cart.svg"></a>
+                <img class="carrinho" src="img/shopping-cart.svg" onclick= "teste()">
             </div>
         </div>
     </nav>
@@ -51,6 +53,20 @@
         </div>   
         <script src="header.js"></script>
     </header>
+    <section id="Carrinho-de-compras">
+        <div id= "show-carro">
+            <div class="cart-row">
+                <strong><span class="carro">Carrinho de Compras</span></strong>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">$0.00</span>
+            </div>
+        <button class="btn btn-primary btn-purchase" type="button">Comprar</button>
+        </div>
+    </section>
     <section class="product">
         <h2 class="product-category">Best selling</h2>
         <div class="all-products">
@@ -58,10 +74,10 @@
                 <div class="product-card">
                     <div class="product-image">
                         <a href="#"><img src="img/forno.webp" class="product-thumb" width="300" height="250"></a>
-                        <button class="card-btn">Add to cart</button>
+                        <button class="card-btn shop-item-btn">Add to cart</button>
                     </div>
                     <div class="product-info">
-                        <h2 class="product-brand">Forno a Vapor CANDY FCP 651 SX (70 L - 59.5 cm - Hidrolítico - Inox)</h2>
+                        <h2 class="product-brand">Forno a Vapor</h2>
                         <p class="product-short-des">Forno com capacidade de 70 litros</p>
                         <span class="price">$420.20</span>
                     </div>
@@ -71,7 +87,7 @@
                 <div class="product-card">
                     <div class="product-image">
                         <a href="#"><img src="img/frigorifico.webp" class="product-thumb" width="300" height="250"></a>
-                        <button class="card-btn">Add to cart</button>
+                        <button class="card-btn shop-item-btn">Add to cart</button>
                     </div>
                     <div class="product-info">
                         <h2 class="product-brand">Frigorifico Samsung</h2>
@@ -84,7 +100,7 @@
                 <div class="product-card">
                     <div class="product-image">
                         <a href="#"><img src="img/corsairfones.webp" class="product-thumb" width="300" height="250"></a>
-                        <button class="card-btn">Add to cart</button>
+                        <button class="card-btn shop-item-btn">Add to cart</button>
                     </div>
                     <div class="product-info">
                         <h2 class="product-brand">Headphones Corsair</h2>
@@ -97,7 +113,7 @@
                 <div class="product-card">
                     <div class="product-image">
                         <a href="#"><img src="img/balança.webp" class="product-thumb" width="300" height="250"></a>
-                        <button class="card-btn">Add to cart</button>
+                        <button class="card-btn shop-item-btn">Add to cart</button>
                     </div>
                     <div class="product-info">
                         <h2 class="product-brand">Balança Digital</h2>
@@ -110,7 +126,7 @@
                 <div class="product-card">
                     <div class="product-image">
                         <a href="#"><img src="img/maquinaroupa.webp" class="product-thumb" width="300" height="250"></a>
-                        <button class="card-btn">Add to cart</button>
+                        <button class="card-btn shop-item-btn">Add to cart</button>
                     </div>
                     <div class="product-info">
                         <h2 class="product-brand">maquina da Roupa</h2>
@@ -123,7 +139,7 @@
                 <div class="product-card">
                     <div class="product-image">
                         <a href="#"><img src="img/portatilazus.webp" class="product-thumb" width="300" height="250"></a>
-                        <button class="card-btn">Add to cart</button>
+                        <button class="card-btn shop-item-btn">Add to cart</button>
                     </div>
                     <div class="product-info">
                         <h2 class="product-brand">Portátil Asus</h2>
@@ -136,7 +152,7 @@
                 <div class="product-card">
                     <div class="product-image">
                         <a href="#"><img src="img/zflip.jpg" class="product-thumb" width="300" height="250"></a>
-                        <button class="card-btn">Add to cart</button>
+                        <button class="card-btn shop-item-btn">Add to cart</button>
                     </div>
                     <div class="product-info">
                         <h2 class="product-brand">Samsung Z flip phone</h2>
